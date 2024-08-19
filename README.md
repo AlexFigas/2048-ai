@@ -13,8 +13,8 @@ This repository contains a collection of AI agents designed to play the game 204
 - [Usage](#usage)
 - [Agents](#agents)
   - [Monte Carlo Agent](#monte-carlo-agent)
-  - [Advanced Monte Carlo Agent](#advanced-monte-carlo-agent)
   - [Enhanced Monte Carlo Agent](#enhanced-monte-carlo-agent)
+  - [Advanced Monte Carlo Agent](#advanced-monte-carlo-agent)
   - [QLearning Agent](#qlearning-agent)
 - [Contributing](#contributing)
 - [License](#license)
@@ -63,19 +63,19 @@ The `MonteCarloAgent` uses a basic Monte Carlo simulation to evaluate potential 
 - File: `src/MonteCarloAgent.py`
 - Strategy: Random simulations
 
-### Advanced Monte Carlo Agent
-
-The `AdvancedMonteCarloAgent` builds upon the basic Monte Carlo approach by incorporating heuristics like board smoothness, monotonicity, and weighted tiles to guide its decision-making process.
-
-- File: `src/AdvancedMonteCarloAgent.py`
-- Strategy: Monte Carlo with heuristics
-
 ### Enhanced Monte Carlo Agent
 
 The `EnhancedMonteCarloAgent` further enhances the Monte Carlo method with a simplified heuristic scoring system, balancing exploration and exploitation to find better moves.
 
 - File: `src/EnhancedMonteCarloAgent.py`
 - Strategy: Monte Carlo with simplified heuristics
+
+### Advanced Monte Carlo Agent
+
+The `AdvancedMonteCarloAgent` builds upon the enhanced Monte Carlo approach by incorporating heuristics like board smoothness, monotonicity, and weighted tiles to guide its decision-making process.
+
+- File: `src/AdvancedMonteCarloAgent.py`
+- Strategy: Monte Carlo with advanced heuristics
 
 ### QLearning Agent
 
@@ -86,23 +86,28 @@ The `QLearningAgent` applies reinforcement learning, specifically Q-learning, to
 
 ## Results
 
-In the end I ran a 500 simulation testing session, took over 8 hours to complete but here are the results:
+In the end I ran a 500 simulation testing with the AdvancedMonteCarloAgent which I believed it was the best approach, took over 8 hours to complete and here are the results:
 
 ![500 Iteration Results: Highest Score: 60352; Average Win Percentage: 58%;](src/images/60352_57.99999999999999.png)
 
 
-### Contributing
+## Contributing
 
 Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
 
-    - Fork the repository
-    - Create a new branch (git checkout -b feature-branch)
-    - Commit your changes (git commit -m 'Add new feature')
-    - Push to the branch (git push origin feature-branch)
-    - Open a Pull Request
+- Fork the repository
+- Create a new branch (`git checkout -b feature-branch`)
+- Commit your changes (`git commit -m 'Add new feature'`)
+- Push to the branch (`git push origin feature-branch`)
+- Open a Pull Request
 
 ## License
 
 This project is licensed under the GNU General Public License v3.0 License - see the LICENSE file for details.
 
+## TODO List:
+- [ ] Create a Agent interface to serve to all agent implementations
+- [ ] Refactor code to have better organization and readability
+- [ ] Improve weighted tiles utilization in the heuristic function of AdvancedMonteCarloAgent
+- [ ] Create new agents
 
